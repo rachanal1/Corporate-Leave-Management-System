@@ -64,14 +64,10 @@ cd leave-management
 python -m venv venv
 
 Activate it:
-
 Windows
-
 venv\Scripts\activate
 
-
 Linux / macOS
-
 source venv/bin/activate
 
 3. Install backend dependencies
@@ -80,8 +76,6 @@ pip install -r requirements.txt
 
 4. Run the backend server
 uvicorn app.main:app
-
-
 Server will start at:
 
 http://127.0.0.1:8000
@@ -151,3 +145,4 @@ This project is for educational use only.
 👨‍💻 Author
 
 Developed as a backend learning project using FastAPI.
+

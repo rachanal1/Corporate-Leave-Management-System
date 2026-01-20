@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP NAV -->
+<div class="top-nav">
+    <button id="applyBtn" onclick="showApply()">Apply Leave</button>
+    <button id="myLeavesBtn" onclick="showMyLeaves()">My Leaves</button>
+    <button id="approveBtn" onclick="showApprove()">Approve / Reject</button>
+    <button id="hrBtn" onclick="showHR()">HR Dashboard</button>
+    <button id="managerDashBtn" onclick="showManagerDashboard()">Team Dashboard</button>
+
+</div>
+
+
+
+<!-- APPLY LEAVE -->
+<div class="card dashboard-card hidden" id="applySection">
+    <div class="card" id="leaveBalanceCard">
+    <p><strong>Total Leaves:</strong> <span id="totalLeaves"></span></p>
+    <p><strong>Used Leaves:</strong> <span id="usedLeaves"></span></p>
+    <p><strong>Remaining Leaves:</strong> <span id="remainingLeaves"></span></p>
+</div>
+
+    <h2>Apply Leave</h2>
+    <input type="date" id="from_date">
+    <input type="date" id="to_date">
+    <input type="text" id="reason" placeholder="Reason">
+    <button onclick="applyLeave()">Apply Leave</button>
+    <p class="msg" id="applyMsg"></p>
+
+</div>
+
+<!-- APPROVE / REJECT -->
+<div class="card dashboard-card hidden" id="approveSection">
+    <h2>Approve / Reject Leaves</h2>
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="leaveTable"></tbody>
+    </table>
+    </div>
+</div>
+<div class="card dashboard-card hidden" id="myLeaveSection">
+    <h2>My Leave Status</h2>
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="myLeaveTable"></tbody>
+    </table>
+    </div>
+</div>
+<div class="card hr-card hidden" id="hrSection">
+    <h2>HR Dashboard</h2>
+
+    <h3>Statistics</h3>
+    <p>Total Employees: <span id="totalEmployees"></span></p>
+    <p>Employees Currently on Leave: <span id="empOnLeave"></span></p>
+    <p>Total Managers: <span id="totalManagers"></span></p>
+    <p>Managers Currently on Leave: <span id="onLeave"></span></p>
+
+    <h3>Employees</h3>
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+    </table>
+    </div>
+
+    <h3>Managers (HR Approval)</h3>
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Leave</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="managerTable"></tbody>
+    </table>
+    </div>
+</div>
+<div class="card dashboard-card hidden" id="managerSection">
+    <h2>Manager Team Dashboard</h2>
+
+    <p>Total Team Members: <span id="teamSize"></span></p>
+    <p>Employees on Leave: <span id="teamOnLeave"></span></p>
+    <p>Pending Approvals: <span id="teamPending"></span></p>
+</div>
+
+
+<!-- LOGOUT -->
+<div class="logout-container">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+    initDashboard();
+</script>
+</body>
+</html>

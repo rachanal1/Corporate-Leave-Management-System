@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #667eea, #764ba2);
+    min-height: 100vh;
+}
+
+/* TOP NAV */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.top-nav button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.top-nav button:hover {
+    background: #5a67d8;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 30px auto;
+}
+
+.dashboard-card {
+    width: 650px;
+}
+
+.hr-card {
+    width: 1100px;
+    max-width: 95%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #667eea;
+    color: white;
+}
+
+.status-pending { color: orange; font-weight: bold; }
+.status-approved { color: green; font-weight: bold; }
+.status-rejected { color: red; font-weight: bold; }
+
+/* LOGOUT */
+.logout-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.logout-btn {
+    width: 200px;
+    background: #e53e3e;
+}
+
+.logout-btn:hover {
+    background: #c53030;
+}
+
+/* MESSAGES */
+.msg {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* HIDE */
+.hidden {
+    display: none;
+}
+.danger-btn {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.danger-btn:hover {
+    background: #c53030;
+}
+
+#hrSection h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#hrSection h3 {
+    margin-top: 25px;
+}
+
+.manager-team-row {
+    background: #f7f9ff;
+}
+
+.inner-table th {
+    background: #5a67d8;
+    color: white;
+}
+
+.inner-table td {
+    background: #ffffff;
+}
